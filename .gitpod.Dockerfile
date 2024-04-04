@@ -12,7 +12,7 @@ RUN npm install -g npm@9.5.1
 
 # Instale a versão desejada do MySQL
 RUN sudo apt-get update && \
-    sudo apt-get install -y mysql-server=5.7.1
+    sudo apt-get install -y mysql-server=5.7
 
 # Copie os arquivos do seu projeto para o contêiner
 COPY . .

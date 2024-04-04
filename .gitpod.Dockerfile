@@ -8,11 +8,11 @@ RUN bash -c ". .nvm/nvm.sh \
     && nvm alias default 18.16.0"
 
 # Instale a versão desejada do npm
-RUN npm install -g npm@9.5.1
+RUN npm install -g npm@latest
 
 # Instale a versão desejada do MySQL
 RUN sudo apt-get update && \
-    sudo apt-get install -y mysql-server=5.7
+    sudo apt-get install -y mysql-server
 
 # Copie os arquivos do seu projeto para o contêiner
 COPY . .

@@ -1,0 +1,11 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - command: "npm start" # Inicia o aplicativo Node.js quando o workspace é aberto
+
+ports:
+  - port: 3000
+    onOpen: open-preview
+  - port: 3306
+    onOpen: ignore

@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  app:
+    build: . # Constrói a imagem do aplicativo a partir do Dockerfile no diretório atual
+    ports:
+      - "3000:3000" # Expõe a porta 3000 para o serviço do app
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db # Define o host do banco de dados para o serviço 'db'
+      - DB_USER=root # Define o usuário do banco de dados
+      - DB_PASSWORD=pass # Define a senha do banco de dados
+      - DB_NAME=mydb # Define o nome do banco de dados
+
+  db:
+    image: mysql:8.0 # Atualize para a versão desejada do MySQL
+    ports:
+      - "3306:3306" # Expõe a porta 3306 para o serviço do banco de dados
+    environment:
+      - MYSQL_ROOT_PASSWORD=pass # Define a senha do root do MySQL
+      - MYSQL_DATABASE=mydb # Cria um banco de dados com o nome 'mydb'
+    volumes:
+      - mysql_data:/var/lib/mysql # Cria um volume para persistir os dados do MySQL
+
+volumes:
+  mysql_data: # Define o volume para os dados do MySQL

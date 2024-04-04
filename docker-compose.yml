@@ -14,7 +14,7 @@ services:
       - DB_NAME=mydb # Define o nome do banco de dados
 
   db:
-    image: mysql:8.0 # Atualize para a versão desejada do MySQL
+    image: mysql:5.7 # Atualize para a versão desejada do MySQL
     ports:
       - "3306:3306" # Expõe a porta 3306 para o serviço do banco de dados
     environment:

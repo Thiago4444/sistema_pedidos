@@ -1,0 +1,22 @@
+{
+  "name": "sistema_pedidos",
+  "version": "1.0.0",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thiagoewdev/sistema_pedidos.git"
+  },
+  "author": "thiagoewdev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thiagoewdev/sistema_pedidos/issues"
+  },
+  "homepage": "https://github.com/thiagoewdev/sistema_pedidos#readme",
+  "description": "",
+  "dependencies": {
+    "mysql2": "^3.9.2"
+  }
+}

@@ -10,15 +10,15 @@ services:
     environment:
       - DB_HOST=db # Define o host do banco de dados para o serviço 'db'
       - DB_USER=root # Define o usuário do banco de dados
-      - DB_PASSWORD=pass # Define a senha do banco de dados
+      - DB_PASSWORD=${DB_PASSWORD} # Define a senha do banco de dados
       - DB_NAME=mydb # Define o nome do banco de dados
 
   db:
-    image: mysql:5.7 # Atualize para a versão desejada do MySQL
+    image: mysql:8.0.36 # Atualize para a versão desejada do MySQL
     ports:
       - "3306:3306" # Expõe a porta 3306 para o serviço do banco de dados
     environment:
-      - MYSQL_ROOT_PASSWORD=pass # Define a senha do root do MySQL
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD} # Define a senha do root do MySQL
       - MYSQL_DATABASE=mydb # Cria um banco de dados com o nome 'mydb'
     volumes:
       - mysql_data:/var/lib/mysql # Cria um volume para persistir os dados do MySQL

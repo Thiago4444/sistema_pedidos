@@ -7,3 +7,6 @@ node_modules/
 # Arquivos temporários
 *.tmp
 *.temp
+
+# dados sensíveis
+.env

@@ -2,7 +2,7 @@
   "name": "sistema_pedidos",
   "version": "1.0.0",
   "desciption": "Sistema de pedidos de materiais escolares.",
-  "main": "scripts.js",
+  "main": "server/index.js",
   "scripts": {
     "start": "node scripts.js",
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -2,7 +2,9 @@ version: '3'
 
 services:
   app:
-    build: . # Constrói a imagem do aplicativo a partir do Dockerfile no diretório atual
+    build: # Constrói a imagem do aplicativo a partir do Dockerfile no diretório atual
+      context: .
+      dockerfile: .gitpod.dockerfile
     ports:
       - "3000:3000" # Expõe a porta 3000 para o serviço do app
     depends_on:

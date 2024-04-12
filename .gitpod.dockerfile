@@ -11,11 +11,11 @@ RUN bash -c ". .nvm/nvm.sh \
 RUN npm install -g npm@latest
 
 # Instale a versão desejada do MySQL
-RUN sudo apt-get update && \
-    sudo apt-get install -y mysql-server=8.0.36-0ubuntu0.22.04.1
+# RUN sudo apt-get update && \
+#     sudo apt-get install -y mysql-server=8.0.36-0ubuntu0.22.04.1
 
 # Impede que o MySQL seja atualizado sempre para a versão mais recente
-RUN sudo apt-mark hold mysql-server
+# RUN sudo apt-mark hold mysql-server
 
 # Copie os arquivos do seu projeto para o contêiner
 COPY . .
